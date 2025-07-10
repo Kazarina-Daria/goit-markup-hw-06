@@ -637,7 +637,10 @@ border-color: #31D0AA;
             line-height: 200%;
             color: #fff;
         width: 165px;
-
+        line-height: 1.5 ;
+        min-width: 165px; 
+         cursor: pointer;
+ justify-content: center; 
         height: 40px;
         background: #4D5AE5;
  }
@@ -868,7 +871,7 @@ height: 40px;
     transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1); 
 }
 .user-comment,
-#email-field,
+.email-field,
 #rel-field,
 .user-name{
     border: 1px solid #2E2F42;
