@@ -796,11 +796,6 @@ color: #8E8F99;
 .checkbox-icon:focus{
     fill:#F4F4FD;
 }
-.custom-checkbox:checked,
-.custom-checkbox:active,
-.custom-checkbox:focus{
- background-color: #404BBF;
-}
 
 .cross{
     border-radius: 100%;
@@ -813,7 +808,14 @@ stroke: rgba(0, 0, 0, 0.1);
 .cross:hover{
     fill: #FFFFFF;
 }
-
+.input-check:checked + .checkbox > .custom-checkbox  {
+background-color: #404BBF;
+ border: none;
+fill:#fff;
+}
+.input-check:focus + .checkbox > .custom-checkbox{
+border-color: #404BBF;
+}
 .checkbox{
 font-weight: 400;
 font-size: 12px;
