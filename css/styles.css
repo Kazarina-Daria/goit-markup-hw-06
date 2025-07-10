@@ -580,19 +580,7 @@ flex-direction: row;
      justify-content: space-between;
 
  }
-.email-field{
-    border: 1px solid #fff;
-    background-color: transparent;
-border-radius: 4px;
-width: 264px;
-height: 40px;
-font-weight: 400;
-font-size: 12px;
-letter-spacing: 0.04em;
-padding-left: 16px;
- font-family: "Roboto", sans-serif;
-    outline: none;
-} 
+ 
 
 .email-field-footer::placeholder{
     color: #fff;
@@ -670,7 +658,11 @@ border-color: #31D0AA;
         .svg-button {
             margin-top: 2px;
             fill: #fff;
+            cursor: pointer;
             margin-left: 16px;
+             line-height: 1.5;
+            min-width: 165px;
+             justify-content: center; 
             align-items: center;
         }
         .subscribe-button:hover,
@@ -831,7 +823,19 @@ line-height: 117%;
 letter-spacing: 0.04em;
 color: #8E8F99;
 }
-
+.email-field{
+    width: 264px;
+    border: 1px solid #fff;
+    background-color: transparent;
+border-radius: 4px;
+height: 40px;
+font-weight: 400;
+font-size: 12px;
+letter-spacing: 0.04em;
+padding-left: 16px;
+ font-family: "Roboto", sans-serif;
+    outline: none;
+}
 .user-name,
 #rel-field{
     border: 1px solid #2E2F42;
@@ -973,9 +977,11 @@ cursor: pointer;
 }
 
 .modal-button:hover{
+    fill: #ffffff; 
 background-color: #404BBF;
 }
 
 .modal-button:hover{
+     fill: #ffffff;
 background-color: #404BBF;
 }
