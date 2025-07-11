@@ -738,10 +738,10 @@ cursor: pointer;
 }
 
 .button-close:focus .cross {
-  fill: #E7E9FC;
+  fill:  #ffffff;
 }
 .input-check:checked + .checkbox .custom-checkbox .checkbox-icon {
-  fill: #F4F4FD;
+  fill:  #ffffff;
 }
 
         .modal-title{
@@ -864,7 +864,7 @@ height: 40px;
 }
 
 .modal-form-container{
-    margin-bottom: 8px;
+    margin-bottom: 16px;
     display: flex;
     flex-direction: column;
 }
