@@ -718,7 +718,7 @@ margin-bottom: 24px;
 display: flex;
 justify-content: center;
 align-items: center;
- transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1); 
+ transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), border 250ms cubic-bezier(0.4, 0, 0.2, 1); 
 padding: 0;
 cursor: pointer;
         }
@@ -747,6 +747,7 @@ cursor: pointer;
 
         .modal-title{
 margin: 0 auto 16px;
+margin-bottom:16px ;
 font-weight: 500;
 font-size: 16px;
 line-height: 150%;
@@ -808,10 +809,6 @@ color: #8E8F99;
 .checkbox-icon:hover,
 .checkbox-icon:focus{
     fill:#F4F4FD;
-}
-
-.input-check:checked + .checkbox .custom-checkbox  {
-  fill: #404bbf;
 }
 
 
