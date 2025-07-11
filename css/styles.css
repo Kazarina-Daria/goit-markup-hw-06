@@ -826,7 +826,7 @@ transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 .input-check:checked + .checkbox > .custom-checkbox  {
 background-color: #404BBF;
  border: none;
-fill:#fff;
+fill: #F4F4FD; 
 }
 
 .checkbox{
@@ -893,6 +893,7 @@ height: 40px;
   color: #4d5ae5;
   text-decoration: underline;
   cursor: pointer;
+  margin-bottom: 16px;
   line-height: 1.33;
   text-decoration-skip-ink: none;
   margin-left: 4px;
