@@ -862,6 +862,12 @@ height: 40px;
 }
 
 .modal-form-container{
+    margin-bottom: 8px;
+    display: flex;
+    flex-direction: column;
+}
+
+.modal-form-container-check{
     margin-bottom: 16px;
     display: flex;
     flex-direction: column;
