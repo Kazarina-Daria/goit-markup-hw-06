@@ -580,9 +580,11 @@ flex-direction: row;
      justify-content: space-between;
 
  }
- 
-
+.email-field{
+    border: 1px solid rgba(46, 47, 66, 0.4); 
+}
 .email-field-footer::placeholder{
+     padding-left: 38px; 
     color: #fff;
 }
 .email-field-footer:focus::placeholder {
@@ -716,7 +718,7 @@ margin-bottom: 24px;
 display: flex;
 justify-content: center;
 align-items: center;
-transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), border 250ms cubic-bezier(0.4, 0, 0.2, 1); 
+ transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), border 250ms cubic-bezier(0.4, 0, 0.2, 1); 
 padding: 0;
 cursor: pointer;
 transition: back;
