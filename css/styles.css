@@ -128,7 +128,7 @@ border-bottom: 1px solid #e7e9fc;
     letter-spacing: 0.03em;
     text-transform: uppercase;
     color: #4d5ae5;
-    display: block;
+    display: flex;
    
     text-decoration: none;
 }
@@ -137,12 +137,16 @@ border-bottom: 1px solid #e7e9fc;
 }
 .header-navigation{
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+      justify-content: space-between;
+      width: 100%;
+
 }
 .header .container{
-    padding: 72 52 72 52;
+       padding: 16px;
     display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
     margin: 0 auto;
 }
 
@@ -265,6 +269,7 @@ address ul,
   background-position: center;
   background-size: cover;
   max-width: 320px;
+  width: auto;
   padding: 0;
   height: 432px;
     margin: 0 auto;
@@ -700,8 +705,6 @@ border-color: #31D0AA;
         font-weight: 500;
             font-size: 16px;
             line-height: 200%;
-            color: #fff;
-        width: 165px;
         line-height: 1.5 ;
         min-width: 165px; 
         cursor: pointer;
@@ -729,7 +732,6 @@ border-color: #31D0AA;
             cursor: pointer;
             margin-left: 16px;
              line-height: 1.5;
-            min-width: 165px;
              justify-content: center; 
             align-items: center;
         }
