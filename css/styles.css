@@ -48,6 +48,7 @@ ul {
 @media screen and (max-width:768px){
 
 .header{
+    position: relative;
     box-shadow:0px 2px 1px rgba(46, 47, 66, 0.08),
         0px 1px 1px rgba(46, 47, 66, 0.16),
         0px 1px 6px rgba(46, 47, 66, 0.08);
@@ -115,7 +116,10 @@ ol {
  flex-direction: column;
   gap: 40px;
   font-style: normal;
+  margin-bottom: 48px;
 }
+
+
 .header{
 border-bottom: 1px solid #e7e9fc;
 }
@@ -171,12 +175,6 @@ letter-spacing: 0.02em;
     padding: 24px 0;
     text-decoration: none; }
 
-
-.slogan-button:hover,
-.slogan-button:focus{
-background-color: #404BBF;
-}
-
 .nav-link-active{
     position: relative;
     color:#404BBF;
@@ -193,14 +191,7 @@ left: 0;
 .portfolio-examples-wrap{
     height: 100;
 }
-.contact-link:hover,
-.contact-link:focus,
-.nav-link-active:hover,
-.nav-link-active:focus,
-.nav-link:hover,
-.nav-link:focus{
-    color: #404BBF;
-}
+
 .contact-list{
     display: flex;
     gap: 40px;
@@ -222,13 +213,16 @@ display: none;
    display: none;
 }
 .contact-link {
-    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
     font-weight: 500;
     font-size: 20px;
     line-height: 120%;
     letter-spacing: 0.02em;
     text-decoration: none;
     color: #434455;
+}
+
+.contact-list li:nth-child(2) .contact-link{
+color: #4D5AE5;
 }
 .portfolio-examples,
 .header-nav,
@@ -249,7 +243,7 @@ address ul,
     line-height: 1.07;
     margin-bottom: 72px;
     font-weight: 700;
-     font-size:  56px;
+     font-size:  36px;
     letter-spacing: 0.02em;
      color: #FFFFFF;
 
@@ -264,7 +258,7 @@ address ul,
       rgba(46, 47, 66, 0.7),
       rgba(46, 47, 66, 0.7)
     ),
-    url(../images/people-office@1x.jpg);
+    url(../images/mobile-backgr-@1x.jpg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -292,6 +286,28 @@ address ul,
 transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+.button-close-nav{
+border: 1px solid rgba(0, 0, 0, 0.1);
+border-radius: 50%;
+ position: absolute;
+  background-color: transparent;
+display: flex;
+top:24px;
+right: 24px;
+height: 24px;
+width: 24px;
+padding: 0;
+  align-items: center;
+  justify-content: center;
+}
+
+
+.social-media-header{
+    display: flex;
+        flex-direction: row;
+        justify-content: center;
+        gap:40px;
+}
 
 .team-subtitle{
     margin: 0;
@@ -303,15 +319,18 @@ transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
     font-weight: 500;
     font-size: 20px;
 }
+.social-media-header-svg{
+background-color: #4D5AE5;
+border-radius: 100%;
+
+}
 
 .team-subtitle {
     margin-bottom: 8px
 }
 .portfolio-pieses{
-    transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
    position: relative;
     border: 1px solid #e7e9fc;
-    width: calc((100% - 48px) / 3);
 }
 .portfolio-examples{
     margin: 0;
@@ -321,8 +340,9 @@ transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
     color: #434455;
     font-weight: 400;
     font-size: 16px;
-    gap: 48px 24px;
+    gap: 48px 16px;
     flex-wrap: wrap;
+    flex-direction: column;
     }
     .portflio-container{
         border: 1px solid #e7e9fc;
@@ -346,7 +366,7 @@ transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
         transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
         
      }
-    .advantage-text{
+   .advantsges-title p.advantage-text:not(:last-child){
         line-height: 1.5;
             letter-spacing: 0.02em;
             color: #434455;
@@ -354,6 +374,7 @@ transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
             margin: 0;
             margin-top: 8px;
             font-size: 16px;
+            margin-bottom: 72px;
     }
     .portfolio-examples-p,
         .team-paragraph{
@@ -373,15 +394,15 @@ transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
     font-size: 20px;
     display: flex;
     justify-content: center;
-    gap: 24px;
-
+    gap: 72px;
+flex-direction: column;
 }
 .advantsges-titles-text {
         margin: 0;
         line-height: 1.2;
         letter-spacing: 0.02em;
-        font-weight: 500;
-        font-size: 20px;
+        font-weight: 700;
+        font-size: 36px;
         color: #2e2f42;
         margin-bottom: 8px;
     flex-basis: calc((100% - 3 * 24px) / 4);
@@ -427,6 +448,7 @@ transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
     font-size: 16px;
     line-height: 1.5;
     letter-spacing: 0.02em;
+    margin-bottom: 72px;
 }
 .section-three{
     background-color: #F4F4FD;
@@ -463,6 +485,7 @@ transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
 .section-four .container{
     position:relative;
+    margin: 0 auto;
 }
 
 .image-wrapper{
@@ -491,16 +514,7 @@ transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
         transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
        
     }
-        .portfolio-pieses:hover{
-            box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
-        }
-    .portfolio-pieses:hover .overlay {
-        transform: translateY(0);
-}
-        
-.portfolio-container-back:hover{
-    transform: translate();
-}
+       
 .portfolio-container {
     padding: 32px 16px;
     border: 1px solid #e7e9fc;
@@ -513,18 +527,15 @@ transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
             0px 1px 1px rgba(46, 47, 66, 0.16),
             0px 2px 1px rgba(46, 47, 66, 0.08);
     background-color: #FFFFFF;
-        width: calc((100% - 3 * 24px) / 4);
             border-radius: 0px 0px 4px 4px;
 }
-.team-members-list:hover {
-    
-    box-shadow: 0 2px 1px 0 rgba(46, 47, 66, 0.08), 0 1px 1px 0 rgba(46, 47, 66, 0.16), 0 1px 6px 0 rgba(46, 47, 66, 0.08);
-}
+
 
 .team-members{
 display: flex;
+flex-direction: column;
 border-radius: 0px 0px 4px 4px;
-gap: 24px ;
+gap: 72px ;
 }
 
 
@@ -555,11 +566,19 @@ flex-direction: row;
 .social-media-title{
     font-weight: 500;
     font-size: 16px;
-    margin: 0;
+   margin: 0 auto 16px auto;
     line-height: 1.5;
-    margin-bottom: 16px;
     letter-spacing: 0.02em;
     color:#fff;
+  text-align: center;
+}
+
+.social-media-footer,
+.subscribe-title,
+.footer-logo-text .site-logo{
+    display: block;
+    text-align: center
+
 }
 
 .subscribe-title{
@@ -571,11 +590,7 @@ flex-direction: row;
    width: 264px;
     margin-right: 120px;
 }
-.social-media-footer{
-    flex: 2;
-    align-items: baseline;
-    margin-right: 120px;
-}
+
 .social-media{
     width: 40px;
         height: 40px;
@@ -592,38 +607,25 @@ flex-direction: row;
      display: flex;
      gap: 16px;
      list-style: none;
+     margin-bottom: 72px;
  }
  .icons-footer-item{
     width: 40px;
         height: 40px;
  }
+.svg-header{
+     fill: #F4F4FD;
+}
 
+.icons-footer-svg,
  .icons-footer-svg,
  .social-media-svg {
     width: 16px;
         height: 16px;
         fill: #F4F4FD;
-        transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
  }
 
- .social-media:hover,
- .social-media:focus  {
-    width: 40px;
-        height: 40px;
-        fill: #F4F4FD;
-        background-color: #404BBF;
-        border-radius: 50%;
-    }
-
-        .icon-link:hover,
-        .icon-link:focus {
-            width: 40px;
-            height: 40px;
-            fill: #F4F4FD;
-            background-color: #31D0AA;
-            border-radius: 50%;  }
-
-     
+ .social-media-header-svg-link,
  .icon-link {
      display: flex;
      justify-content: center;
@@ -633,14 +635,14 @@ flex-direction: row;
      background-color: #4D5AE5;
      border-radius: 50%;
     flex-direction: row;
-    
-    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
  }
 
  .footer .container {
     align-items: baseline;
      display: flex;
+     flex-direction: column;
      justify-content: space-between;
+     margin: 0 auto;
 
  }
 .user-name{
@@ -676,21 +678,6 @@ border-color: #31D0AA;
 .input-container input {
   padding-left: 38px;
   outline: transparent;
-}
-.input-icon:hover,
-.input-icon:focus{
-    fill: #4D5AE5;
-    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.input-container:has(input:hover) .input-icon,
-.input-container:has(input:focus) .input-icon,
-.input-container:has(input:active) .input-icon,
-.input-container:has(textarea:hover) .input-icon,
-.input-container:has(textarea:focus) .input-icon,
-.input-container:has(textarea:active) .input-icon {
-    fill: #4D5AE5;
-    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
  .subscribe-button{
@@ -735,7 +722,6 @@ border-color: #31D0AA;
              justify-content: center; 
             align-items: center;
         }
-        .subscribe-button:hover,
         .subscribe-button:active{
             cursor: pointer;
             cursor: pointer;
@@ -792,19 +778,8 @@ cursor: pointer;
    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.button-close:hover,
-.button-close:focus{
-    background-color: #404bbf;
-    border: none;
-    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), border 250ms cubic-bezier(0.4, 0, 0.2, 1); 
-}
 
-.button-close:focus .cross {
-  fill:  #ffffff;
-}
-.input-check:checked + .checkbox .custom-checkbox .checkbox-icon {
-  fill:  #ffffff;
-}
+
 
         .modal-title{
 margin: 0 auto 16px;
@@ -837,9 +812,7 @@ line-height: 117%;
 letter-spacing: 0.04em;
 color: #8E8F99;
             }
-.user-comment:focus{
-     border-color: #4D5AE5;
-}
+
 .modal-container container-textaria{
     margin-bottom: 16px;
 }
@@ -867,12 +840,6 @@ color: #8E8F99;
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.checkbox-icon:hover,
-.checkbox-icon:focus{
-    fill:#F4F4FD;
-}
-
-
 .cross{
     border-radius: 100%;
 fill: #2E2F42;
@@ -881,9 +848,7 @@ stroke: rgba(0, 0, 0, 0.1);
 transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.cross:focus{
-    fill: #FFFFFF;
-}
+
 .input-check:checked + .checkbox > .custom-checkbox  {
 background-color: #404BBF;
  border: none;
@@ -934,12 +899,6 @@ height: 40px;
     flex-direction: column;
 }
 
-.user-name:hover,
-.user-name:focus,
-.user-name:active{
-    border-color: #4D5AE5;
-    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1); 
-}
 .user-comment,
 .user-name{
     border: 1px solid #2E2F42;
@@ -1052,9 +1011,7 @@ background-color: #404BBF;
   fill: currentColor;
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.modal-button:hover .svg-button,
-.modal-button:focus .svg-button {
-  fill: #ffffff;
+
 }*/
 
 
