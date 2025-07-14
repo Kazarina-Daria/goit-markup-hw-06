@@ -45,7 +45,6 @@ ul {
   overflow: hidden;
 }
 
-@media screen and (max-width:768px){
 
 .header{
     position: relative;
@@ -133,7 +132,6 @@ border-bottom: 1px solid #e7e9fc;
     text-transform: uppercase;
     color: #4d5ae5;
     display: flex;
-   
     text-decoration: none;
 }
 .footer .site-logo {
@@ -438,6 +436,7 @@ flex-direction: column;
     margin: 0;
     display: flex;
     padding: 100px 0;
+    justify-content: center;
     
 
 }
@@ -484,8 +483,8 @@ flex-direction: column;
 
 
 .section-four .container{
+    width: 100%;
     position:relative;
-    margin: 0 auto;
 }
 
 .image-wrapper{
@@ -561,7 +560,8 @@ padding-bottom: 96px;
 flex-direction: row;
     justify-content: center;
 }
-.subscribe-button,
+
+
 .subscribe-title,
 .social-media-title{
     font-weight: 500;
@@ -573,17 +573,22 @@ flex-direction: row;
   text-align: center;
 }
 
-.social-media-footer,
+
 .subscribe-title,
 .footer-logo-text .site-logo{
     display: block;
     text-align: center
 
 }
-
-.subscribe-title{
-    margin-bottom: 16px;
+.subscribe-footer,
+.social-media-footer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+      margin: 0 auto;
+    justify-content: center;
 }
+
 
 .footer-logo-text{
     align-items: baseline;
@@ -648,18 +653,7 @@ flex-direction: row;
 .user-name{
     border: 1px solid rgba(46, 47, 66, 0.4); 
 }
-.email-field-footer::placeholder{
-     padding-left: 38px; 
-    color: #fff;
-}
-.email-field-footer:focus::placeholder {
-  color: #31D0AA; 
-}
 
-.email-field-footer:active,
-.email-field-footer:focus{
-border-color: #31D0AA;
-}
  .user-name{
     border: 1px solid #fff;
         border-radius: 4px;
@@ -681,32 +675,38 @@ border-color: #31D0AA;
 }
 
  .subscribe-button{
-    margin: 0;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+    color:#fff;
     border-radius: 4px;
     display: flex;
-        padding: 8px 24px;
-        border: none;
-        letter-spacing: 0.04em;
-            text-align: center;
-            align-items: center;
-        font-weight: 500;
-            font-size: 16px;
-            line-height: 200%;
-        line-height: 1.5 ;
-        min-width: 165px; 
-        cursor: pointer;
- justify-content: center; 
-        height: 40px;
-        background: #4D5AE5;
+     padding: 8px 24px;
+     border: none;
+      letter-spacing: 0.04em;
+     text-align: center;
+     align-items: center;
+     font-size: 16px;
+   width: 165px; 
+     cursor: pointer;
+     justify-content: center; 
+     height: 40px;
+      background: #4D5AE5;
+      margin: 0 auto;
  }
 
  .form-footer{
-    display: flex;
-        gap: 24px;
+    flex-direction: column;
+    gap: 24px;
+     display: flex;
+    justify-content: center;
+    align-items: center;
  }
 
+
  .email-field-footer::placeholder {
-        font-weight: 400;
+        font-weight: 400; 
         font-size: 12px;
         line-height: 200%;
         letter-spacing: 0.04em;
@@ -729,7 +729,26 @@ border-color: #31D0AA;
                 border: none;
                 transition: background-color 250ms cubic-bezier(0.4, 0,0.2, 1);
         }
-        /*.modal-overlay{
+
+
+        .email-field-footer{
+    width: 288px;
+    border: 1px solid #fff;
+    background-color: transparent;
+border-radius: 4px;
+height: 40px;
+  color: #ffffff;
+font-weight: 400;
+font-size: 12px;
+line-height: 2;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+letter-spacing: 0.04em;
+padding-left: 16px;
+ font-family: "Roboto", sans-serif;
+    outline: none;
+
+}
+        .modal-overlay{
             position: fixed;
             background-color: rgba(46,47,66,0.4);
             width: 100%;
@@ -740,7 +759,7 @@ border-color: #31D0AA;
             display: flex;
             justify-content: center;
             align-items: center;
-           /*opacity: 0;
+           opacity: 0;
             pointer-events: none;
             transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1), visibility 250ms cubic-bezier(0.4,0,0.2,1);
         }
@@ -862,22 +881,7 @@ line-height: 117%;
 letter-spacing: 0.04em;
 color: #8E8F99;
 }
-.email-field-footer{
-    min-width: 256px;
-    border: 1px solid #fff;
-    background-color: transparent;
-border-radius: 4px;
-height: 40px;
-  color: #ffffff;
-font-weight: 400;
-font-size: 12px;
-line-height: 2;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-letter-spacing: 0.04em;
-padding-left: 16px;
- font-family: "Roboto", sans-serif;
-    outline: none;
-}
+
 .user-name{
     border: 1px solid #2E2F42;
 border-radius: 4px;
@@ -1012,7 +1016,77 @@ background-color: #404BBF;
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-}*/
+@media screen and (min-width: 768px) {
+     .container {
+    max-width: 768px;
+  }
+  .social-media-header,
+  .box-nav .cross,
+ .button-burger-menu{
+  display: none;
+}
+
+.header .container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.nav-link {
+    display: inline-block;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+    color: #2e2f42;
+    padding: 24px 0;
+    text-decoration: none; }
+
+ .navigation{
+      display: flex;
+    align-items: center;
+    gap: 120px;
+ }
+.contact-list{
+    padding: 24px 0;
+    display: block;
+}
+
+.advantsges-title{
+    flex-direction: row;
+}
+.advantage-text{
+    width:356px
+    flex-wrap:wrap;
+}
+.box-nav{
+    display: block;
+}
+.nav-link-active{
+ display: inline-block;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+    color: #4D5AE5;
+    padding: 24px 0;
+    text-decoration: none; 
+}
+.header-nav{
+    margin: 0;
+     padding: 0;
+    display: flex;
+    flex-grow: 1;
+}
+.section-one {
+    min-width:768px ;
+    height: 436px;
+    background-image: linear-gradient(
+      to bottom,
+      rgba(46, 47, 66, 0.7),
+      rgba(46, 47, 66, 0.7)
+    ),
+    url(../images/people-office@1x.jpg);
+}
 
 
 }
