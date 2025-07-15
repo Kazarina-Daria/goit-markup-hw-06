@@ -53,7 +53,7 @@ ul {
         0px 1px 6px rgba(46, 47, 66, 0.08);
 }
 .container {
-    max-width: 288px;
+    width: 320px;
     width: 100%;
     padding: 0 16px;
     margin: 0 auto;
@@ -119,9 +119,6 @@ ol {
 }
 
 
-.header{
-border-bottom: 1px solid #e7e9fc;
-}
 .site-logo {
     margin: 0;
     font-family: "Raleway", sans-serif;
@@ -230,10 +227,6 @@ address ul,
     list-style: none;
 }
 
-.team-members{
-    margin: 0;
-    list-style: none;
-}
 .slogan{
       max-width: 216px;
     text-align: center;
@@ -520,7 +513,8 @@ flex-direction: column;
 }
 
 .team-members-list {
-    
+    width:264px;
+margin: 0 auto;
     box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
             0px 1px 1px rgba(46, 47, 66, 0.16),
             0px 2px 1px rgba(46, 47, 66, 0.08);
@@ -531,9 +525,13 @@ flex-direction: column;
 
 .team-members{
 display: flex;
+align-items: center;
+justify-content: center;
 flex-direction: column;
 border-radius: 0px 0px 4px 4px;
 gap: 72px ;
+margin: 0;
+list-style: none;
 }
 
 
@@ -590,9 +588,12 @@ flex-direction: row;
 
 
 .footer-logo-text{
-    align-items: baseline;
+ align-self: center;
    width: 264px;
     margin-right: 120px;
+    justify-content: center;
+  margin: 0;
+
 }
 
 .social-media{
@@ -696,6 +697,7 @@ flex-direction: row;
  }
 
  .form-footer{
+    display: flex;
     flex-direction: column;
     gap: 24px;
      display: flex;
@@ -1006,10 +1008,6 @@ cursor: pointer;
   box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.14), 0 1px 3px 0 rgba(0, 0, 0, 0.12), 0 2px 1px 0 rgba(0, 0, 0, 0.2);
 }
 
-.modal-button:hover{
-     fill: #ffffff;
-background-color: #404BBF;
-}
 .svg-button {
   fill: currentColor;
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -1017,7 +1015,7 @@ background-color: #404BBF;
 
 @media screen and (min-width: 768px) {
      .container {
- max-width: 736px;
+ width: 736px;
     margin: 0 auto;
     padding: 0 16px;
   }
@@ -1030,6 +1028,7 @@ background-color: #404BBF;
 }
 
 .header .container{
+      display: flex;
     justify-content: space-between;
     align-items: center;
 }
@@ -1054,11 +1053,15 @@ background-color: #404BBF;
 }
 
 .advantsges-title{
+    display: flex;
     flex-direction: row;
+    column-gap: 72px;
+    row-gap: 24px;
+     flex-wrap: wrap;
 }
 
 .box-nav{
-    display: block;
+     display: flex;
 }
 .nav-link-active{
  display: inline-block;
@@ -1067,7 +1070,7 @@ background-color: #404BBF;
     line-height: 1.5;
     letter-spacing: 0.02em;
     color: #4D5AE5;
-    padding: 24px 0;
+    padding: 0 0 24px 0;
     text-decoration: none; 
 }
 .header-nav{
@@ -1089,6 +1092,7 @@ background-color: #404BBF;
 }
 .contact-info{
   display: flex ;
+flex-direction: row;
 }
 .contact-list .contact-link{
 font-weight: 400;
@@ -1105,20 +1109,19 @@ color: #434455;
 }
 
 .nav-link {
-    display: inline-block;
+    display: flex;
     line-height: 1.5;
     letter-spacing: 0.02em;
     color: #2e2f42;
-    padding: 24px 0;
+    padding: 0 0 24px 0;
  }
 .advantsges-title {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between; 
+  justify-content: center; 
   row-gap: 72px;
+  flex-direction: row;
   column-gap: 24px;
-  padding: 0;
-  margin: 0;
 }
 .advantage-text{
 font-weight: 500;
@@ -1129,20 +1132,68 @@ color: #434455;
    width:356px;
     flex-wrap:wrap;
 }
-.team-members-list {
-  width: calc(50% - 12px); 
-  box-sizing: border-box;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
+
 
 .team-members-list{
-    flex-direction:column;
-    width: 264px;
-    box-sizing: border-box
+     width:264px;
+     box-sizing: border-box;
+}
+
+
+.header-nav{
+    flex-grow: 1;
+}
+
+.navigation{
+ display: flex;
+  align-items:center;
+  justify-content: flex-end;
+}
+
+.team-members {
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: 24px;
+  row-gap: 64px;
+  justify-content: center;
+  flex-direction: row;
+
 }
 
 
 
+.portfolio-pieses{
+   position: relative;
+    border: 1px solid #e7e9fc;
+    width: calc((100% - 24px) / 2);
+    box-sizing: border-box;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+}
+
+.portfolio-examples{
+    margin: 0;
+    gap: 72px 24px;
+    flex-wrap: wrap;
+    justify-content: center;
+    flex-direction: row;
+    }
+
+.advantsges-title-text{
+width: calc((100% - 24px) / 2);
+   box-sizing: border-box;
+    flex-wrap: wrap;
+      position: relative;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    justify-content: center;
+    column-gap: 24px;
+    row-gap: 72px;
+}
+.advantsges-titles-text{
+    display: flex;
+    justify-content: flex-start;
+}
 }
