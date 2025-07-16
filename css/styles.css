@@ -723,33 +723,28 @@ flex-direction: row;
              justify-content: center; 
             align-items: center;
         }
-        .subscribe-button:active{
-            cursor: pointer;
-            cursor: pointer;
-            background-color: #31D0AA;
-                border: none;
-                transition: background-color 250ms cubic-bezier(0.4, 0,0.2, 1);
-        }
-
-
+        .input-check:checked + .checkbox .custom-checkbox .checkbox-icon {
+  fill:  #ffffff;
+}
         .email-field-footer{
-    width: 288px;
-    border: 1px solid #fff;
-    background-color: transparent;
 border-radius: 4px;
 height: 40px;
-  color: #ffffff;
+opacity: 0.3;
+width: 288px;
+border: 1px solid #fff;
+background-color: transparent;
+color: #ffffff;
 font-weight: 400;
 font-size: 12px;
 line-height: 2;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 letter-spacing: 0.04em;
 padding-left: 16px;
- font-family: "Roboto", sans-serif;
-    outline: none;
+font-family: "Roboto", sans-serif;
+outline: none;
 
 }
-        .modal-overlay{
+        .modal-overlay.active{
             position: fixed;
             background-color: rgba(46,47,66,0.4);
             width: 100%;
@@ -1028,9 +1023,10 @@ cursor: pointer;
 }
 
 .header .container{
+    padding: 16px ;
       display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items:flex-start;
 }
 .nav-link {
     display: inline-block;
@@ -1039,7 +1035,6 @@ cursor: pointer;
     line-height: 1.5;
     letter-spacing: 0.02em;
     color: #2e2f42;
-    padding: 24px 0;
     text-decoration: none; }
 
  .navigation{
@@ -1048,8 +1043,8 @@ cursor: pointer;
     gap: 120px;
  }
 .contact-list{
-    padding: 24px 0;
-    display: block;
+  color: #434455;
+  display: block;
 }
 
 .advantsges-title{
@@ -1065,12 +1060,13 @@ cursor: pointer;
 }
 .nav-link-active{
  display: inline-block;
+  padding: 0 0 24px 0;  
     font-weight: 500;
     font-size: 16px;
     line-height: 1.5;
     letter-spacing: 0.02em;
     color: #4D5AE5;
-    padding: 0 0 24px 0;
+    padding: 0 ;
     text-decoration: none; 
 }
 .header-nav{
@@ -1079,6 +1075,8 @@ cursor: pointer;
     display: flex;
     flex-grow: 1;
     flex-direction: row;
+    margin-top: 8px;
+}
 }
 .section-one {
     min-width:768px ;
@@ -1092,7 +1090,10 @@ cursor: pointer;
 }
 .contact-info{
   display: flex ;
-flex-direction: row;
+align-items: flex-end;
+justify-content:flex-start;
+margin: 0;
+
 }
 .contact-list .contact-link{
 font-weight: 400;
@@ -1107,13 +1108,22 @@ color: #434455;
     max-width: 496px;
     margin-bottom: 36px;
 }
-
+.nav-link-active::after {
+    content: "";
+    position: absolute;
+    border-radius: 1px;
+    bottom: -20px;
+   height: 4px;
+   left: 0;
+   border-radius: 2px;
+background-color: #404BBF;
+}
 .nav-link {
     display: flex;
     line-height: 1.5;
     letter-spacing: 0.02em;
     color: #2e2f42;
-    padding: 0 0 24px 0;
+    padding: 0;
  }
 .advantsges-title {
   display: flex;
@@ -1139,14 +1149,9 @@ color: #434455;
      box-sizing: border-box;
 }
 
-
-.header-nav{
-    flex-grow: 1;
-}
-
 .navigation{
  display: flex;
-  align-items:center;
+  align-items:flex-start;
   justify-content: flex-end;
 }
 
@@ -1160,12 +1165,10 @@ color: #434455;
 
 }
 
-
-
 .portfolio-pieses{
    position: relative;
     border: 1px solid #e7e9fc;
-    width: calc((100% - 24px) / 2);
+     width:356px;
     box-sizing: border-box;
     flex-direction: row;
     flex-wrap: wrap;
@@ -1196,4 +1199,67 @@ width: calc((100% - 24px) / 2);
     display: flex;
     justify-content: flex-start;
 }
+
+.social-media-footer{
+     align-items: flex-start;
+}
+.footer-logo-text{
+       padding: 0;
+}
+.footer .container{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 72px 24px;
+    max-width: 496px;
+    padding: 0;
+}
+.subscribe-footer{
+align-items: flex-start;
+margin: 0;
+}
+
+.form-footer{
+flex-direction: row;
+}
+.container .site-logo,
+.social-media-title,
+.footer-logo-text .site-logo{
+   display: flex;
+   align-items: flex-start;
+
+}
+
+  .subscribe-button{
+      align-items: flex-start;
+  }
+.subscribe-title{
+    margin: 0 0 16px 0;
+
+}
+.icons-footer,
+.footer-text{
+    margin:0 ;
+}
+
+.site-logo{
+display: flex; 
+align-items:flex-start;
+margin: 8px 0 0 0;
+padding: 0;
+
+}
+
+/* *MODAL WINDOW SECTION */
+  
+
+@media screen and (min-width: 1158px) {
+  .container {
+    max-width: 1158px;
+    padding: 0 15px;
+  }
+
+
 }
