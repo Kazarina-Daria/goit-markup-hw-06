@@ -264,12 +264,12 @@ address ul,
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background-image: linear-gradient(
+ background-image: linear-gradient(
       to bottom,
       rgba(46, 47, 66, 0.7),
       rgba(46, 47, 66, 0.7)
     ),
-    url(../images/mobile-backgr-@1x.jpg);
+    url('../images/mobile-backgr-@1x.jpg');
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -279,6 +279,8 @@ address ul,
   height: 432px;
     margin: 0 auto;
 }
+
+
 .slogan-button{
     cursor: pointer;
     line-height: 1.5;
@@ -315,7 +317,11 @@ padding: 0;
 
 .navigation,
 .contact-info{
-    display: none;
+   display: none;
+}
+.mobile-menu.is-open .navigation,
+.mobile-menu.is-open .contact-info {
+  display: block; 
 }
 .social-media-header{
     display: flex;
@@ -347,7 +353,7 @@ border-radius: 100%;
    position: relative;
     border: 1px solid #e7e9fc;
 }
-.portfolio-examples{
+.portfolio-examples {
     margin: 0;
     display: flex;
     line-height: 1.5;
@@ -358,7 +364,8 @@ border-radius: 100%;
     gap: 48px 16px;
     flex-wrap: wrap;
     flex-direction: column;
-    }
+    width: 100%;
+}
     .portflio-container{
         border: 1px solid #e7e9fc;
         border-top: none;
@@ -394,6 +401,9 @@ border-radius: 100%;
             margin-top: 8px;
             font-size: 16px;
             margin-bottom: 72px;
+    }
+    .advantsges-title{
+         align-items: center; 
     }
     .portfolio-examples-p,
         .team-paragraph{
@@ -1044,10 +1054,21 @@ cursor: pointer;
 }
 
 @media screen and (min-width: 768px) {
-     .container {
- width: 736px;
+  .container {
+    width: 768px;
     margin: 0 auto;
     padding: 0 16px;
+  }
+
+    .section-four .container {
+    width: 100%;
+    max-width: 768px;
+    margin: 0 auto;
+    position: relative;
+  }
+  .portfolio-pieses {
+    width: calc((100% - 24px) / 2);
+    box-sizing: border-box;
   }
 
   .button-close-nav,
@@ -1202,9 +1223,10 @@ color: #434455;
    position: relative;
     border: 1px solid #e7e9fc;
      width:356px;
-    box-sizing: border-box;
     flex-direction: row;
     flex-wrap: wrap;
+     width: calc((100% - 24px) / 2);
+    box-sizing: border-box;
     transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -1340,7 +1362,11 @@ font-size: 16px;
         background-color: 250ms cubic-bezier(0.4, 0, 0.2, 1);
         transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
      }
-
+  .portfolio-examples {
+    flex-direction: row;
+    gap: 72px 24px;
+    width: 100%;
+  }
      .portfolio-examples-p{
         transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -1352,8 +1378,7 @@ font-size: 16px;
         }
     .portfolio-pieses:hover .overlay {
         transform: translateY(0);
-}
-        
+}  
 .portfolio-container-back:hover{
     transform: translate();
 }
@@ -1511,7 +1536,49 @@ background-color: #404BBF;
      height:64px;
     display: block;
 }
+}
 
-
-
+@media (min-resolution: 2x) {
+  .section-one{
+    background-image: linear-gradient(
+        to bottom,
+        rgba(46, 47, 66, 0.7),
+        rgba(46, 47, 66, 0.7)
+      ),
+      url('../images/mobile-backgr-@2x.jpg');
+  }
+}
+@media screen and (min-width: 768px) {
+.section-one{  
+  background-image: linear-gradient(
+    rgba(46, 47, 66, 0.7),
+    rgba(46, 47, 66, 0.7)
+   ), url(../images/background-tablet@1x.jpg);
+  }
+  
+  @media (min-resolution: 2x){
+  .section-one {
+  background-image: linear-gradient(
+    rgba(46, 47, 66, 0.7),
+    rgba(46, 47, 66, 0.7)
+   ), url(../images/background-tablet@2x.jpg);
+  }
+  }
+}
+@media screen and (min-width: 1158px) {
+.section-one {  
+  background-image: linear-gradient(
+    rgba(46, 47, 66, 0.7),
+    rgba(46, 47, 66, 0.7)
+   ), url(../images/people-office@1x.jpg);
+  }
+  
+  @media (min-resolution: 2x){
+  .section-one {
+  background-image: linear-gradient(
+    rgba(46, 47, 66, 0.7),
+    rgba(46, 47, 66, 0.7)
+   ), url(../images/people-office@2x.jpg);
+  }
+  }
 }
