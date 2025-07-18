@@ -1401,6 +1401,7 @@ font-size: 16px;
 }
 .section-four .container{
     width: 100%;
+    
 }
 .icons-footer-svg,
  .social-media-svg {
@@ -1518,6 +1519,13 @@ background-color: #404BBF;
         margin-bottom: 8px;
     flex-basis: calc((100% - 3 * 24px) / 4);
 }
+ .section-four .container {
+    width: 100%;
+    max-width: 1158px;
+    margin: 0 auto;
+    position: relative;
+  }
+
 .svg-container{
     width: 264px;
     height: 112px;
